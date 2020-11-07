@@ -11,7 +11,7 @@ var ctlBasemaps;
 var ctlOverlays;
 
 //get public access token
-L.mapbox.accessToken = 'pk.eyJ1IjoiYnVkc3V0dHJlZSIsImEiOiJja2Z2djM2ZnIxZGNqMnFtdGZuaXZpOGZ1In0.76J2fRYi91OJ2bDWkexDFg';
+L.mapbox.accessToken = appConfig.access_token;
 //create map and overlays
 $(document).ready(function() {
     lyrRelief = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxxen8yq5twc1cqaapjf1my9');

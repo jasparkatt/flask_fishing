@@ -1,4 +1,6 @@
 /.idea/
+/.vscode/
+/app/__pycache__/
 /venv/
 /.env
 /app/static/img/brulepic.jpg

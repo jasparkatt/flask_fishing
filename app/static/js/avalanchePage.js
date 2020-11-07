@@ -10,8 +10,8 @@ var ctlBasemaps;
 var ctlOverlays;
 
 //get public access token
-//L.mapbox.accessToken ='{{access_token}}';
-L.mapbox.accessToken=''
+L.mapbox.accessToken = appConfig.access_token;
+
 //create map and overlays
 $(document).ready(function() {
     lyrRelief = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxxen8yq5twc1cqaapjf1my9');

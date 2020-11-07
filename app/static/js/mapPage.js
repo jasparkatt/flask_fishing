@@ -11,7 +11,7 @@ var ctlBasemaps;
 var ctlOverlays;
 
 //get public access token
-L.mapbox.accessToken = {{ access_token }};
+L.mapbox.accessToken = appConfig.access_token;
 //create map and overlays
 $(document).ready(function() {
     mymap = L.map('map', {
