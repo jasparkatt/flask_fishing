@@ -1,0 +1,54 @@
+{% extends "public/base4.html" %}
+{% block title %} {% endblock %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dataPage.css') }}"> {% endblock %}
+{% block favicon %}<link rel="shortcut icon" href="{{ url_for('static', filename='favicon_Sa.ico') }}"> {% endblock %}
+{% block content %}
+<nav class="navbar navbar-dark bg-custom-2 navbar-expand-sm">
+  <span class="navbar-brand">
+      <img src="static/img/favicon.ico" width="30" height="30" alt="logo"> Spot X </span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/">Home</a>
+      <a class="nav-item nav-link" href="/folio">Folio</a>
+      <a class="nav-item nav-link" href="/map">Maps</a>
+    </div>
+  </div>
+</nav>
+<div id="content">
+  <table class = "table table-sm table-dark table-hover"> 
+  <thead class = "thead-light">
+    <tr>
+        <th>ID</th>
+        <th>Stream</th>
+        <th>County</th>
+      <th>Species</th>
+    </tr>
+    </thead>
+    <tbody>
+     {% for row in data %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+              <td>{{row[3]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small black">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">A Left Handed Production, 2020
+  <a class="fab fa-github btn fa-lg" href="https://github.com/jasparkatt/flask_fishing" style="color:#f2f2f0" target="_blank"></a>
+  </div>
+
+
+</footer>
+<!-- Footer -->
+{% endblock %}
+{% block scripts %} {% endblock %}

@@ -1,0 +1,51 @@
+#map { height: 100vh;}
+
+html, body { height: 100%;}
+
+body { display: flex; flex-direction: column; overflow: hidden;}
+
+.navbar-dark .navbar-brand {
+    color: #f2f2f0;
+}
+
+.navbar-dark .navbar-nav .nav-link { color: #f2f2f0;}
+
+.navbar { background: #778899;}
+
+.nav-link,.navbar-brand { color: #fff; cursor: default;}
+
+.nav-link { margin-right: 1em !important;}
+
+.nav-link:hover { background: #00004d; color: #f2f2f2;}
+
+.navbar-collapse { justify-content: flex-end;}
+
+.navbar-toggler { background:#fff !important;}
+
+.leaflet-popup-content-wrapper {
+    background: #fff8fc;
+    color: #000002;
+    font: 15px Serifa BT;
+    line-height: 22px;
+    border: 1px double #00008b
+}
+
+.leaflet-popup-tip-container {
+    width: 10px;
+    height: 15px
+}
+
+.leaflet-popup-tip {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #2c3e50
+}
+
+.fish-icons {
+    background-color: rgba(175, 190, 43, 0.705);
+    background-image: url("japanese-carp.svg");
+    /* width: 110%;
+    height: 110%; */
+    /* background-size: 80%;*/
+    border-radius: 100%;
+}

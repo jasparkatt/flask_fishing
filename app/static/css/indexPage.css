@@ -1,0 +1,30 @@
+.navbar{ background: #778899;}
+
+.navbar-dark .navbar-brand {
+    color: #f2f2f0;
+}
+
+.navbar-dark .navbar-nav .nav-link { color: #f2f2f0;}
+
+.nav-link,.navbar-brand { color: #fff; cursor: default;}
+
+.nav-link{ margin-right: 1em !important;}
+
+.nav-link:hover{ background: #00004d; color: #f2f2f2; }
+
+.navbar-collapse{ justify-content: flex-end;}
+
+.navbar-toggler{  background:#fff !important;}
+
+html, body { height: 100%;}
+
+body { display: flex; flex-direction: column; overflow: hidden;}
+
+.header {
+  background-image: url('../img/jeebus.JPG');
+  background-size: cover;
+  background-position: center;
+  position: relative;}
+
+footer { position: fixed; height: 50px; margin-top: 1em; bottom: 0; right: 0; left: 0;
+background: #778899; cursor: default;}
