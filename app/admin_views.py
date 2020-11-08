@@ -30,9 +30,9 @@ def user():
 def logout():
     if "user" in session:
         session.pop("user", None)
-        return redirect(url_for("dashboard"))
+        return render_template('admin/logout.html')
     else:
-        return redirect(url_for("index"))    
+        return redirect(url_for("dashboard"))    
 
 @app.route('/dashboard')
 def dashboard():

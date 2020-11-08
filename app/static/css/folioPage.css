@@ -2,7 +2,7 @@ html, body { height: 100%;}
 
 body { display: flex; flex-direction: column; overflow:}
 
-.navbar { background: #778899;}
+.navbar { background: #00025ca4;}
 
 .nav-link,.navbar-brand { color: #fff; cursor: default;}
 

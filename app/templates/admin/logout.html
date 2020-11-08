@@ -1,5 +1,5 @@
 {% extends "public/base4.html" %}
-{% block title %}Admin{% endblock %}
+{% block title %}Log Out{% endblock %}
 {% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/logout.css') }}"> {% endblock %}
 {% block favicon %}<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon_sa.ico') }}"> {% endblock %}
 {% block content %}
@@ -11,7 +11,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/logout">Log Out</a>
+      <a class="nav-item nav-link" href="/dashboard">Admin</a>
     </div>
   </div>
 </nav>

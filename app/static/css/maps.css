@@ -10,7 +10,7 @@ body { display: flex; flex-direction: column; overflow: hidden;}
 
 .navbar-dark .navbar-nav .nav-link { color: #f2f2f0;}
 
-.navbar { background: #778899;}
+.navbar { background: #00025ca4;}
 
 .nav-link,.navbar-brand { color: #fff; cursor: default;}
 
