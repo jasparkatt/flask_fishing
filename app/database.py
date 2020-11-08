@@ -2,12 +2,9 @@ from app import app
 import os
 from flask import render_template
 import psycopg2
+from app.settings import *
 
-PG_HOST = os.getenv('POSTGRES_HOST')
-PG_NAME = os.getenv('POSTGRES_NAME')
-PG_USER = os.getenv('POSTGRES_USER')
-PG_PORT = os.getenv('POSTGRES_PORT')
-PG_PASSWORD = os.getenv('POSTGRES_PASSWORD')
+
 
 con = psycopg2.connect(database=PG_NAME, user=PG_USER, password=PG_PASSWORD, host=PG_HOST, port=PG_PORT)
 cursor = con.cursor()
