@@ -13,7 +13,7 @@ def login():
     else:
         if 'user' in session:
             return redirect(url_for("user"))
-        return render_template('admin/login2.html')
+        return render_template('admin/login.html')
 
 
 @app.route('/user')
@@ -29,3 +29,7 @@ def user():
 def logout():
     session.pop("user", None)
     return render_template("admin/logout.html")
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('admin/dashboard.html')    

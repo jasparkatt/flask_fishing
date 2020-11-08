@@ -1,14 +1,27 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>dashboard</title>
-</head>
-<body>
-        <h1>admin dashboard</h1>
-
-</body>
-</html>
+{% extends "public/base4.html" %}
+{% block title %}Admin{% endblock %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dashboard.css') }}"> {% endblock %}
+{% block favicon %}<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon_sa.ico') }}"> {% endblock %}
+{% block content %}
+    <nav class="navbar navbar-dark bg-custom-2 navbar-expand-sm">
+  <span class="navbar-brand" href="#">
+      <img src="static/img/favicon.ico" width="30" height="30" alt="logo"> Please Log In </span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/login">Log In</a>
+      <a class="nav-item nav-link" href="/logout">Log Out</a>
+    </div>
+  </div>
+</nav>
+<header class="page-header header container-fluid"></header>
+<footer class="page-footer font-small blue">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">A Left Handed Production, 2020
+  <a class="fab fa-github btn fa-lg" href="https://github.com/jasparkatt/flask_fishing" style="color:rgb(75, 47, 21)" target="_blank"></a>
+  </div>>
+</footer>
+{% endblock %}
+{% block scripts %} <script src="{{ url_for('static', filename='js/indexPage.js') }}"></script> {% endblock %}

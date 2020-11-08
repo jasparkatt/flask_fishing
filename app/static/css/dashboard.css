@@ -1,0 +1,39 @@
+#content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px; /* Need a specific value to work */
+}
+
+.navbar{ background: hsl(54, 94%, 27%);}
+
+.navbar-dark .navbar-brand {
+    color: #f2f2f0;
+}
+
+.navbar-dark .navbar-nav .nav-link { color: #f2f2f0;}
+
+.nav-link,.navbar-brand { color: #fff; cursor: default;}
+
+.nav-link{ margin-right: 1em !important;}
+
+.nav-link:hover{ background: #b4b49e42; color: #f2f2f2; }
+
+.navbar-collapse{ justify-content: flex-end;}
+
+.navbar-toggler{  background:#fff !important;}
+
+html, body { height: 100%;}
+
+body { display: flex; flex-direction: column; overflow: hidden;}
+
+.header {
+  background-image: url('../img/frontpage.JPG');
+  background-size: cover;
+  background-position: center;
+  position: relative;}
+
+footer { position: fixed; height: 50px; margin-top: 1em; bottom: 0; right: 0; left: 0;
+background: hsl(54, 94%, 27%); cursor: default;}
