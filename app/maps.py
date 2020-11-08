@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template
-from app.settings import secret_key, MAPBOX_ACCESS_TOKEN
+from app.settings import MAPBOX_ACCESS_TOKEN
 
 @app.route('/key')
 def key():

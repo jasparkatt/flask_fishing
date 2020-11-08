@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template, redirect, url_for, request, session
+from app.settings import SECRET_KEY
 
 
 @app.route('/login', methods=['GET', 'POST'])
