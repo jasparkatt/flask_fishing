@@ -1,10 +1,26 @@
 {% extends "public/base4.html" %}
-{% block title %}{% endblock %}
+{% block title %}Admin{% endblock %}
 {% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/logout.css') }}"> {% endblock %}
-{% block favicon %}{% endblock %}
+{% block favicon %}<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon_sa.ico') }}"> {% endblock %}
 {% block content %}
-     <div class="container" style="width:500px;">
-      <h1>Come Again!</h1>
+    <nav class="navbar navbar-dark bg-custom-2 navbar-expand-sm">
+  <span class="navbar-brand" href="#">
+      <img src="static/img/favicon.ico" width="30" height="30" alt="logo"> Thank You, Come Again... </span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/logout">Log Out</a>
     </div>
+  </div>
+</nav>
+<header class="page-header header container-fluid"></header>
+<footer class="page-footer font-small blue">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">A Left Handed Production, 2020
+  <a class="fab fa-github btn fa-lg" href="https://github.com/jasparkatt/flask_fishing" style="color:rgb(75, 47, 21)" target="_blank"></a>
+  </div>>
+</footer>
 {% endblock %}
-{% block scripts %}{% endblock %}
+{% block scripts %} <script src="{{ url_for('static', filename='js/indexPage.js') }}"></script> {% endblock %}

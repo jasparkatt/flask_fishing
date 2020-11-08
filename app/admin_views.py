@@ -28,8 +28,11 @@ def user():
 
 @app.route('/logout')
 def logout():
-    session.pop("user", None)
-    return render_template("admin/logout.html")
+    if "user" in session:
+        session.pop("user", None)
+        return redirect(url_for("dashboard"))
+    else:
+        return redirect(url_for("index"))    
 
 @app.route('/dashboard')
 def dashboard():

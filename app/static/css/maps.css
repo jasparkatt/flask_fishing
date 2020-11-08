@@ -16,7 +16,7 @@ body { display: flex; flex-direction: column; overflow: hidden;}
 
 .nav-link { margin-right: 1em !important;}
 
-.nav-link:hover { background: #00004d; color: #f2f2f2;}
+.nav-link:hover { background:  #9c9ceca6; color: #f2f2f2;}
 
 .navbar-collapse { justify-content: flex-end;}
 
