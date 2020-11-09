@@ -1,6 +1,6 @@
 html, body { height: 100%;}
 
-body { display: flex; flex-direction: column; overflow:}
+body { display: flex; flex-direction: column; overflow: hidden}
 
 .navbar { background: #00025ca4;}
 

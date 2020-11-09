@@ -1,7 +1,4 @@
-.navbar {
-background:#F97300;
-}
+/* common to all public/css files */
+html, body { height: 100%;}
 
-.navbar-brand {
-color: #f4f4f4;
-}
+
