@@ -36,4 +36,4 @@ body { display: flex; flex-direction: column; overflow: hidden;}
   position: relative;}
 
 footer { position: fixed; height: 50px; margin-top: 1em; bottom: 0; right: 0; left: 0;
-background: #00025ca4; cursor: default;}
+background: #00025ca4; cursor: default;font-style: italic; color: rgba(255, 251, 251, 0.76);}
