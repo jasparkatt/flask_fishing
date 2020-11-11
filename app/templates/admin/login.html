@@ -1,8 +1,5 @@
-{% extends "public/base4.html" %}
-{% block title %}Log In{% endblock %}
-{% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/logIn.css') }}"> {% endblock %}
-{% block favicon %}{% endblock %}
-{% block content %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}"> {% endblock %}
+
 <form action="/login" method="POST">
   <div class="login">
   <div class="login-screen">
@@ -25,6 +22,4 @@
       {% if error %}
         <p class="error"><strong>Error:</strong> {{ error }}
       {% endif %}
-    </div>
-{% endblock %}
-{% block scripts %}{% endblock %}
+    
