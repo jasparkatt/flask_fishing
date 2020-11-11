@@ -3,20 +3,6 @@
 {% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}"> {% endblock %}
 {% block favicon %}<link rel="shortcut icon" href="{{ url_for('static', filename='favicon_Sa.ico') }}"> {% endblock %}
 {% block content %}
-<nav class="navbar navbar-dark bg-custom-2 navbar-expand-sm">
-  <span class="navbar-brand">
-      <img src="static/img/favicon.ico" width="30" height="30" alt="logo"> Spot X </span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/">Home</a>
-      <a class="nav-item nav-link" href="/folio">Folio</a>
-      <a class="nav-item nav-link" href="/map">Maps</a>
-    </div>
-  </div>
-</nav>
 <div id="content">
   <table class = "table table-bordered table-sm table-hover"> 
   <thead class = "thead-light">

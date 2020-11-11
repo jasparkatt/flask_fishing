@@ -1,4 +1,10 @@
 {% extends "public/base2.html" %}
 {% block title %} Rambler Home {% endblock %}
+{% block content %}<section class="container-fluid flex-grow-1">
+    <div class="row">        
+            <header class="page-header header container-fluid"></header>        
+    </div>    
+</section>
+{% endblock %}
 {% block favicon %} <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon_sa.ico') }}"> {% endblock %}
 

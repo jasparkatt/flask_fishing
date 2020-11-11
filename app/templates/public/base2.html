@@ -14,7 +14,7 @@
     {% block favicon %}<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon_sa.ico') }}"> {% endblock %}
   </head>
     <body> 
-      {% block content %}     
+           
         <nav class="navbar navbar-dark bg-custom-2 navbar-expand-sm">
     <span class="navbar-brand" href="#">
         <img src="static/img/favicon.ico" width="30" height="30" alt="logo"> The Central Sands Rambler </span>
@@ -31,13 +31,8 @@
         </div>
       </div>
 </nav>
-<section class="container-fluid flex-grow-1">
-    <div class="row">        
-            <header class="page-header header container-fluid"></header>        
-    </div>
-</section>
-<div id="map"></div>
-     {% endblock %}
+
+{% block content %} {% endblock %}
     <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
     <script crossorigin="anonymous"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

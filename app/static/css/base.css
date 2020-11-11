@@ -91,8 +91,8 @@ filter: brightness(1.4);
 text-transform: uppercase;
 text-align: center;
 position: relative;
-font-size: 17px;
-padding: 10px;
+font-size: 15px;
+padding: 15px;
 background-color: transparent;
 color: #FFF;
 padding: 1em 0;
@@ -151,6 +151,13 @@ transform: translate3d(0,0,0);
   /* background-size: 80%;*/
   border-radius: 100%;
 }
+p {
+  font-family: "Georgia", sans-serif;
+  display: inline;
+  color: black;
+}
+
+
 
 footer { position: fixed; height: 50px; margin-top: 1em; bottom: 0; right: 0; left: 0;
 background: #7788992f; cursor: default;}
