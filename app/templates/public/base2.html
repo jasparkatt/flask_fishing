@@ -2,7 +2,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta charset="UTF-8" />
-    <title>{% block title %}Maps{% endblock %}</title>
+    <title>{% block title %} The Central Sands Rambler {% endblock %}</title>
     <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
@@ -10,29 +10,34 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
-   {% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/maps.css') }}"> {% endblock %}
-      {% block favicon %}<link rel="shortcut icon" href="{{ url_for('static', filename='favicon_Sa.ico') }}"> {% endblock %}
+    {% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}"> {% endblock %}
+    {% block favicon %}<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon_sa.ico') }}"> {% endblock %}
   </head>
-    <body>
-    {% block content %}
-    <nav class="navbar navbar-dark bg-custom-2 navbar-expand-sm">
-  <span class="navbar-brand" href="#">
-      <img src="static/img/favicon.ico" width="30" height="30" alt="logo"> Rambing In Wisconsin </span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/">Home</a>
-      <li class="nav-item">
-        <!-- <button id="btnLocate" button type="button" class="btn-sm btn-secondary">Locate</button> -->
-        <button id="btnLocate" button type="button" class="btn btn-outline-light">Locate</button>
-      </li>
-    </div>
-  </div>
+    <body> 
+      {% block content %}     
+        <nav class="navbar navbar-dark bg-custom-2 navbar-expand-sm">
+    <span class="navbar-brand" href="#">
+        <img src="static/img/favicon.ico" width="30" height="30" alt="logo"> The Central Sands Rambler </span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/folio">Folio</a>
+          <a class="nav-item nav-link" href="/data">Data</a>
+          <a class="nav-item nav-link" href="/map">Maps</a>
+          <a class="nav-item nav-link" href="/login">Log In</a>
+          <a class="nav-item nav-link" href="/logout">Log Out</a>
+        </div>
+      </div>
 </nav>
-    <div id="map"></div>
-    {% endblock %}
+<section class="container-fluid flex-grow-1">
+    <div class="row">        
+            <header class="page-header header container-fluid"></header>        
+    </div>
+</section>
+<div id="map"></div>
+     {% endblock %}
     <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
     <script crossorigin="anonymous"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -44,10 +49,10 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <script type="text/javascript">
-            window.appConfig = {
-              access_token: '{{ access_token }}'
-            }
-            </script>        
-    {% block scripts %}{% endblock %}
+    window.appConfig = {
+      access_token: '{{ access_token }}'
+    }
+    </script>        
+    {% block scripts %} <script src="{{ url_for('static', filename='js/base.js') }}"></script> {% endblock %}
     </body>
 </html>
