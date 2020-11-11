@@ -1,28 +1,30 @@
 {% extends "public/base2.html" %}
 {% block title %} Data {% endblock %}
-{% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}"> {% endblock %}
-{% block favicon %}<link rel="shortcut icon" href="{{ url_for('static', filename='favicon_Sa.ico') }}"> {% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}"> {% endblock %}
+{% block favicon %}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon_Sa.ico') }}"> {% endblock %}
 {% block content %}
 <div id="content">
-  <table class = "table table-bordered table-sm table-hover"> 
-  <thead class = "thead-light">
-    <tr>
+  <table class="table table-bordered table-sm table-hover">
+    <thead class="thead-light">
+      <tr>
         <th>ID</th>
         <th>Stream</th>
         <th>County</th>
-      <th>Species</th>
-    </tr>
+        <th>Species</th>
+      </tr>
     </thead>
     <tbody>
-     {% for row in data %}
-            <tr>
-                <td>{{row[0]}}</td>
-                <td>{{row[1]}}</td>
-                <td>{{row[2]}}</td>
-              <td>{{row[3]}}</td>
-            </tr>
-        {% endfor %}
+      {% for row in data %}
+      <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+      </tr>
+      {% endfor %}
     </tbody>
-</table>
+  </table>
 </div>
 {% endblock %}

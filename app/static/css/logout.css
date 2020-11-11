@@ -4,36 +4,72 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 100px; /* Need a specific value to work */
+  width: 100px;
+  /* Need a specific value to work */
 }
 
-.navbar{ background: #00025ca4;}
+.navbar {
+  background: #00025ca4;
+}
 
 .navbar-dark .navbar-brand {
-    color: #f2f2f0;
+  color: #f2f2f0;
 }
 
-.navbar-dark .navbar-nav .nav-link { color: #f2f2f0;}
+.navbar-dark .navbar-nav .nav-link {
+  color: #f2f2f0;
+}
 
-.nav-link,.navbar-brand { color: #fff; cursor: default;}
+.nav-link,
+.navbar-brand {
+  color: #fff;
+  cursor: default;
+}
 
-.nav-link{ margin-right: 1em !important;}
+.nav-link {
+  margin-right: 1em !important;
+}
 
-.nav-link:hover{ background: #b4b49e42; color: #f2f2f2; }
+.nav-link:hover {
+  background: #b4b49e42;
+  color: #f2f2f2;
+}
 
-.navbar-collapse{ justify-content: flex-end;}
+.navbar-collapse {
+  justify-content: flex-end;
+}
 
-.navbar-toggler{  background:#fff !important;}
+.navbar-toggler {
+  background: #fff !important;
+}
 
-html, body { height: 100%;}
+html,
+body {
+  height: 100%;
+}
 
-body { display: flex; flex-direction: column; overflow: hidden;}
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
 .header {
   background-image: url('../img/backpage.JPG');
   background-size: cover;
   background-position: center;
-  position: relative;}
+  position: relative;
+}
 
-footer { position: fixed; height: 50px; margin-top: 1em; bottom: 0; right: 0; left: 0;
-background: #00025ca4; cursor: default;font-style: italic; color: rgba(255, 251, 251, 0.76);}
+footer {
+  position: fixed;
+  height: 50px;
+  margin-top: 1em;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #00025ca4;
+  cursor: default;
+  font-style: italic;
+  color: rgba(255, 251, 251, 0.76);
+}
