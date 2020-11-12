@@ -23,3 +23,9 @@ def avalanchePage():
 def centralPage():
     access_token = MAPBOX_ACCESS_TOKEN
     return render_template('public/centralsands.html', access_token=access_token)
+
+
+@app.route('/upperwis')
+def upperwis():
+    access_token = MAPBOX_ACCESS_TOKEN
+    return render_template('public/upperwis.html', access_token=access_token)    
