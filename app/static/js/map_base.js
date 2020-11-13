@@ -3,6 +3,13 @@
 //zoom to depends on page view...maybe use {{title}} jinja tag
 //to handle that logic by title name e.g. <title>Central sands<title/> find that example that shows
 //that title trick. 
+function myFunc() {
+    return place
+}
+
+function myotherFunc() {
+    return title
+}
 
 //create a leaflet map object
 var mymap;
@@ -20,13 +27,14 @@ L.mapbox.accessToken = appConfig.access_token;
 
 //create map and overlays
 $(document).ready(function() {
+    $('.header').height($(window).height());
     lyrRelief = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxxen8yq5twc1cqaapjf1my9');
     lyrCreek = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxw63sdr03gj1cmy6y89ul89');
     lyrLabels = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxzb1lq71k3y1cob7ha24xw1');
     lyrSatellite = L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v10');  
     
     mymap = L.map('map', {
-        center: 'center',
+        center: myFunc(),
         zoom:11,
         zoomControl:false,
         attributionControl:false,

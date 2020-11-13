@@ -7,9 +7,11 @@ from flask import render_template
 # need a template/index.html file here to load in render_template func()
 @app.route('/')
 def index():
-    return render_template('public/indexPage.html')
+    data = {'center': []}
+    return render_template('public/indexPage.html',data=data)
 
 
 @app.route('/folio')
 def folioPage():
-    return render_template('public/folioPage.html')
+    data = {'center': []}
+    return render_template('public/folioPage.html',data=data)

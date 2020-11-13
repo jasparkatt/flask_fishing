@@ -10,12 +10,16 @@ var ctlLayers;
 var ctlBasemaps;
 var ctlOverlays;
 
+function myFunc() {
+    return place
+}
+
 //get public access token
 L.mapbox.accessToken = appConfig.access_token;
 //create map and overlays
 $(document).ready(function() {
     mymap = L.map('map', {
-        center:[44.41, -89.00],
+        center:myFunc(),
         zoom:7.5,
         zoomControl:false,
         attributionControl:false
