@@ -1,5 +1,7 @@
 .navbar {
   background: #a39800de;
+  font-size: 13px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .navbar-dark .navbar-brand {
@@ -21,7 +23,7 @@
 }
 
 .nav-link:hover {
-  background: #00004d;
+  background: #d8cc2680;
   color: #f2f2f2;
 }
 
@@ -192,6 +194,8 @@ p {
 
 
 footer {
+  font-size: 13px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   position: fixed;
   height: 50px;
   margin-top: 1em;

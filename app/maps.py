@@ -4,7 +4,9 @@ from app.settings import MAPBOX_ACCESS_TOKEN
 
 @app.route('/key')
 def key():
-    return secret_key
+    access_token = MAPBOX_ACCESS_TOKEN
+    center = [45.602222, -89.780278]
+    return render_template('public/driftless.html', access_token=access_token, center=center)
 
 # route for map with some data displayed
 @app.route('/map')
