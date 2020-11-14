@@ -192,6 +192,16 @@ p {
   color: black;
 }
 
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    background: #d1c95ab6;
+}
+.dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+    
+}
+
 
 
 footer {

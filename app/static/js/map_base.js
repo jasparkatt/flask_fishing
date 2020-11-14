@@ -7,8 +7,6 @@ function myFunc() {
     return place
 }
 
-
-
 //create a leaflet map object
 var mymap;
 var lyrSatellite; //open street maps
