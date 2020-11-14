@@ -35,5 +35,5 @@ def centralPage():
 @app.route('/upperwis')
 def upperwis():
     access_token = MAPBOX_ACCESS_TOKEN
-    data = {'center': [46.555, -91.629], 'title': 'Lake Run'}
+    data = {'center': [46.555, -91.629], 'title': 'Lake Fish'}
     return render_template('public/map_base.html', access_token=access_token,data=data)    

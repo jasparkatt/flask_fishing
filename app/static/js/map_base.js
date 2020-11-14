@@ -7,9 +7,7 @@ function myFunc() {
     return place
 }
 
-function myotherFunc() {
-    return title
-}
+
 
 //create a leaflet map object
 var mymap;

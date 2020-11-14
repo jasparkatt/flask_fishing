@@ -1,7 +1,8 @@
 .navbar {
   background-color: #a39800ef;
-  font-size: 14px;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+  font-size: 17px;
+  font-family: "Georgia";
+  font-style: italic;
 }
 
 .navbar-brand {
