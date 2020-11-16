@@ -1,5 +1,5 @@
 {% extends "public/base2.html" %}
-{% block title %} Favorites {% endblock %}
+{% block title %} {{data['title']}} {% endblock %}
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}"> {% endblock %}
 {% block favicon %}
@@ -14,13 +14,27 @@
       </tr>
     </thead>
     <tbody>
-      {% for row in data %}
+      {% for result in results %}
       <tr>
-        <td>{{row[0]}}</td>
-        <td>{{row[1]}}</td>
+        <td>{{result[1]}}</td>
+        <td>{{result[2]}}</td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
 </div>
+<canvas id="myCanvas" width="600" height="400"></canvas>
+<p id="caption">The chart is displaying a simple line chart.</p>
 {% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+  var total = {{ results['total'] }}
+</script>
+
+<script type="text/javascript">
+  var county = {{ results['name'] }}
+</script>
+
+  <script src="{{ url_for('static', filename='js/data_viz.js') }}"></script> 
+  {% endblock %}

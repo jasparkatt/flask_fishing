@@ -19,11 +19,6 @@ def mapPage():
 
 
 @app.route('/avalanche')
-def avalanchePage():
-    access_token = MAPBOX_ACCESS_TOKEN
-    data = {'center': [43.556667, -90.887778],'title': 'Driftless Area'}
-    return render_template('public/map_base.html', access_token=access_token,data=data)
-
 
 @app.route('/central')
 def centralPage():

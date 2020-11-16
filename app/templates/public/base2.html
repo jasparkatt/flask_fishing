@@ -41,7 +41,16 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="/">Home</a>
         <a class="nav-item nav-link" href="/folio">Folio</a>
-        <a class="nav-item nav-link" href="/data">Data</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Data
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/all_spots">All Spots</a>
+            <a class="dropdown-item" href="/fav_cnty">Most Visited Counties</a>
+            <a class="dropdown-item" href="/fav_wtrshd">Most Visited Watershed</a>
+          </div>
+        </div>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Maps
@@ -70,6 +79,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
   <script type="text/javascript">
     window.appConfig = {

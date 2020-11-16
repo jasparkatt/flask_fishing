@@ -1,9 +1,9 @@
 {% extends "public/base2.html" %}
-{% block title %} Data {% endblock %}
+{% block title %} {{data['title']}} {% endblock %}
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}"> {% endblock %}
 {% block favicon %}
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon_Sa.ico') }}"> {% endblock %}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon_sa.ico') }}"> {% endblock %}
 {% block content %}
 <div id="content">
   <table class="table table-bordered table-sm table-hover">
@@ -16,15 +16,17 @@
       </tr>
     </thead>
     <tbody>
-      {% for row in data %}
+      {% for result in results %}
       <tr>
-        <td>{{row[0]}}</td>
-        <td>{{row[1]}}</td>
-        <td>{{row[2]}}</td>
-        <td>{{row[3]}}</td>
+        <td>{{result[0]}}</td>
+        <td>{{result[1]}}</td>
+        <td>{{result[2]}}</td>
+        <td>{{result[3]}}</td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
 </div>
+<canvas id="myCanvas" width="600" height="400"></canvas>
+<p id="caption">The chart is displaying a simple line chart.</p>
 {% endblock %}
