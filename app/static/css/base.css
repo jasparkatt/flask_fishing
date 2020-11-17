@@ -1,7 +1,8 @@
 .navbar {
   background-color: #a39800ef;
-  font-size: 16px;
+  font-size: 17px;
   font-family: "Modern438Smc";
+  font-style: italic;
   
 }
 
@@ -86,12 +87,12 @@ table td {
   overflow: hidden;
   opacity: 0;
   filter: alpha(opacity=0);
-  width: 55%;
+  width: 56%;
   height: 81%;
-  left: 22%;
-  top: 10%;
+  left: 23%;
+  top: 11%;
   border-radius: 80%;
-  border: 2px solid #FFF;
+  border: 2.2px solid rgba(248, 248, 255, 0.801);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(50%, 50%, 0);
@@ -99,7 +100,7 @@ table td {
 }
 
 .hovereffect:hover .overlay {
-  background-color: rgba(0, 30, 31, 0.507);
+  background-color: rgba(21, 36, 37, 0.507);
 }
 
 .hovereffect img {
@@ -107,12 +108,15 @@ table td {
   position: relative;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
+  
 }
 
 .hovereffect:hover img {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.4" /><feFuncG type="linear" slope="1.4" /><feFuncB type="linear" slope="1.4" /></feComponentTransfer></filter></svg>#filter');
   filter: brightness(1.4);
   -webkit-filter: brightness(1.4);
+  filter: grayscale(100%);
+
 }
 
 .hovereffect h2 {
@@ -122,7 +126,7 @@ table td {
   font-size: 15px;
   padding: 15px;
   background-color: transparent;
-  color: #FFF;
+  color: #f8f8ff;
   padding: 1em 0;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -135,7 +139,7 @@ table td {
 
 .hovereffect a,
 .hovereffect p {
-  color: #FFF;
+  color:#f8f8ff;
   padding: 1em 0;
   opacity: 0;
   filter: alpha(opacity=0);
