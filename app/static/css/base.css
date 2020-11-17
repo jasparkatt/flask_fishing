@@ -60,7 +60,7 @@ table td {
 /*Portfolio*/
 .portfolio {
   position: relative;
-  background: #81858f2a;
+  background-image: linear-gradient(180deg, rgba(250, 250, 136, 0.541), rgba(141, 141, 7, 0.63));
 }
 
 .portfolio img {
