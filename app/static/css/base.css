@@ -1,8 +1,8 @@
 .navbar {
   background-color: #a39800ef;
-  font-size: 17px;
-  font-family: "Georgia";
-  font-style: italic;
+  font-size: 16px;
+  font-family: "Modern438Smc";
+  
 }
 
 .navbar-brand {
@@ -99,7 +99,7 @@ table td {
 }
 
 .hovereffect:hover .overlay {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 30, 31, 0.507);
 }
 
 .hovereffect img {
@@ -130,6 +130,7 @@ table td {
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(-150%, -400%, 0);
   transform: translate3d(-150%, -400%, 0);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .hovereffect a,
@@ -187,9 +188,17 @@ table td {
 }
 
 p {
-  font-family: "Georgia", sans-serif;
+  background-color: transparent;
+  color: rgba(40, 125, 153, 0.932);
+  padding: 1em 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-150%, -400%, 0);
+  transform: translate3d(-150%, -400%, 0);
+  font-family: "Modern438Smc", sans-serif;
   display: inline;
-  color: black;
 }
 
 .dropdown:hover > .dropdown-menu {
