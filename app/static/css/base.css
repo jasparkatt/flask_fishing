@@ -1,9 +1,7 @@
 .navbar {
   background-color: #a39800ef;
   font-size: 17px;
-  font-family: "Modern438Smc";
-  font-style: italic;
-  
+  font-family: "Modern438Smc";  
 }
 
 .navbar-brand {
@@ -45,7 +43,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  overflow: inherit;
+  overflow: auto;
 }
 
 .header {
@@ -135,6 +133,7 @@ table td {
   -webkit-transform: translate3d(-150%, -400%, 0);
   transform: translate3d(-150%, -400%, 0);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: -0.5px 0 rgba(0, 0, 0, 0.685), 0 0.5px rgba(0, 0, 0, 0.685), 0.5px 0 rgba(0, 0, 0, 0.685), 0 -0.5px rgba(0, 0, 0, 0.685);  
 }
 
 .hovereffect a,
@@ -147,6 +146,7 @@ table td {
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(-150%, -400%, 0);
   transform: translate3d(-150%, -400%, 0);
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .hovereffect:hover a,
