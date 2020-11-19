@@ -14,21 +14,31 @@ def key():
 @app.route('/map')
 def mapPage():
     access_token = MAPBOX_ACCESS_TOKEN
-    data = {'center': [44.41, -89.00]}
-    return render_template('public/maps.html', access_token=access_token,data=data)
+    data = {'center': [44.41, -89.00], 'title': 'Home Waters', 'zoom': 7}
+    return render_template('public/map_base.html', access_token=access_token,data=data)
 
 
 @app.route('/avalanche')
+def driftless():
+    access_token = MAPBOX_ACCESS_TOKEN
+    data = {'center':[43.602222, -90.630278], 'title': 'Driftless Area', 'zoom': 9}
+    return render_template('public/map_base.html', access_token=access_token,data=data)
 
 @app.route('/central')
 def centralPage():
     access_token = MAPBOX_ACCESS_TOKEN
-    data = {'center': [44.49016, -89.30744], 'title': 'Central Sands'}
+    data = {'center': [44.1475, -89.181389], 'title': 'Central Sands', 'zoom': 10}
     return render_template('public/map_base.html', access_token=access_token,data=data)
 
 
 @app.route('/upperwis')
 def upperwis():
     access_token = MAPBOX_ACCESS_TOKEN
-    data = {'center': [46.555, -91.629], 'title': 'Lake Fish'}
-    return render_template('public/map_base.html', access_token=access_token,data=data)    
+    data = {'center': [46.555, -91.629], 'title': 'Lake Fish', 'zoom': 11}
+    return render_template('public/map_base.html', access_token=access_token,data=data)  
+
+@app.route('/newis')
+def newis():
+    access_token = MAPBOX_ACCESS_TOKEN
+    data = {'center': [44.883333, -87.866667], 'title': 'Lake Fish', 'zoom': 13}
+    return render_template('public/map_base.html', access_token=access_token,data=data)     

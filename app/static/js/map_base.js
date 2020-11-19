@@ -7,6 +7,10 @@ function myFunc() {
     return place
 }
 
+function myzoomFunc() {
+    return zoom
+}
+
 
 //create a leaflet map object
 var mymap;
@@ -32,7 +36,7 @@ $(document).ready(function() {
     
     mymap = L.map('map', {
         center: myFunc(),
-        zoom:11,
+        zoom:myzoomFunc(),
         zoomControl:false,
         attributionControl:false,
         layers: [lyrCreek,lyrLabels]

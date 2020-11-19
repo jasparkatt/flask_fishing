@@ -1,3 +1,7 @@
+function myFunc() {
+    return place
+}
+
 //create a leaflet map object
 var mymap;
 var lyrSatellite; //open street maps
@@ -10,19 +14,17 @@ var ctlLayers;
 var ctlBasemaps;
 var ctlOverlays;
 
-function myFunc() {
-    return place
-}
-
 //get public access token
 L.mapbox.accessToken = appConfig.access_token;
 //create map and overlays
 $(document).ready(function() {
+    $('.header').height($(window).height());
     mymap = L.map('map', {
         center:myFunc(),
-        zoom:7.5,
+        zoom:7,
         zoomControl:false,
-        attributionControl:false
+        attributionControl:false,
+        layers: [lyrLabels]
     });
     lyrRelief = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxxen8yq5twc1cqaapjf1my9');
     lyrCreek = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxw63sdr03gj1cmy6y89ul89');
@@ -36,7 +38,7 @@ $(document).ready(function() {
     $("btnTrout").click()
 
 
-    mymap.addLayer(lyrSatellite);
+    mymap.addLayer(lyrRelief);
 
     objBasemaps = {
         "Hillshade":lyrRelief,

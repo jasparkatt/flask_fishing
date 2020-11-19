@@ -24,10 +24,10 @@
 
 .nav-link:hover {
   background: #f6f7fad0;
-  color: #ffffffce;
-  opacity: 0.8;
-  border-radius: 25px;
-  text-shadow: -0.65px 0 rgba(0, 0, 0, 0.685), 0 0.65px rgba(0, 0, 0, 0.685), 0.65px 0 rgba(0, 0, 0, 0.685), 0 -0.65px rgba(0, 0, 0, 0.685);
+  color: #fffffff8;
+  opacity: 0.95;
+  border-radius: 5px;
+  text-shadow: -0.6px 0 rgba(0, 0, 0, 0.993), 0 0.65px rgba(0, 0, 0, 0.938), 0.65px 0 rgba(0, 0, 0, 0.986), 0 -0.65px rgba(0, 0, 0, 0.986);
 }
 
 .navbar-collapse {
@@ -70,6 +70,10 @@ table td {
   height: 15rem;
   width: 100%;
   margin: 1em;
+  border: 5px solid rgba(65, 84, 104, 0.877);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -106,18 +110,16 @@ table td {
 
 .hovereffect img {
   display: block;
-  position: relative;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  
+  position: relative;  
 }
 
 .hovereffect:hover img {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.4" /><feFuncG type="linear" slope="1.4" /><feFuncB type="linear" slope="1.4" /></feComponentTransfer></filter></svg>#filter');
-  filter: brightness(1.4);
-  -webkit-filter: brightness(1.4);
-  filter: grayscale(100%);
-
+  filter: brightness(2.6);
+  -webkit-filter: brightness(2.6);
+  filter: grayscale(35%);
+  filter: blur(3.25px);
+  transition: 0.32s;
 }
 
 .hovereffect h2 {
