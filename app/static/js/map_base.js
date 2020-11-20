@@ -11,6 +11,12 @@ function myzoomFunc() {
     return zoom
 }
 
+function mymarkFunc() {
+    return marks
+}
+
+
+
 
 //create a leaflet map object
 var mymap;
@@ -22,6 +28,7 @@ var lyrLabels; //style layer from mapbox
 var ctlLayers;
 var ctlBasemaps;
 var ctlOverlays;
+var marks = mymarkFunc();
 
 //get public access token
 L.mapbox.accessToken = appConfig.access_token;
@@ -55,6 +62,20 @@ $(document).ready(function() {
     };
 
     ctlLayers = L.control.layers(objBasemaps, objOverlays).addTo(mymap); //{position:'bottomright'}
+
+    /* for (var i = 0; i < marks.length; i++) {
+        marker = new L.marker([marks[i][0],marks[i][1]])
+            .addTo(mymap);
+    } */
+
+    for (var i = 0; i < marks.length; i++) {
+        circle = new L.circle([marks[i][0],marks[i][1]], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 1,
+        radius: 750
+        }).addTo(mymap);
+    }
 })
 
   //  https://api.mapbox.com/styles/v1/YOUR_USERNAME/YOUR_STYLE_ID/tiles/256/{z}/{x}/{y}?access_token={{'ACCESS_KEY'}}
