@@ -21,7 +21,7 @@ def mapPage():
 @app.route('/avalanche')
 def driftless():
     access_token = MAPBOX_ACCESS_TOKEN
-    data = {'center':[43.602222, -90.630278], 'title': 'Driftless Area', 'zoom': 9}
+    data = {'center':[43.602222, -90.630278], 'title': 'The Driftless', 'zoom': 9}
     marks = [[43.41543,-90.54951], [43.59822,-90.78042]]
     return render_template('public/map_base.html', access_token=access_token,data=data,marks=marks)
 

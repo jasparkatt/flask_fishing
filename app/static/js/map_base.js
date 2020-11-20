@@ -78,4 +78,3 @@ $(document).ready(function() {
     }
 })
 
-  //  https://api.mapbox.com/styles/v1/YOUR_USERNAME/YOUR_STYLE_ID/tiles/256/{z}/{x}/{y}?access_token={{'ACCESS_KEY'}}

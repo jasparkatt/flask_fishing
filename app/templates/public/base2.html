@@ -84,24 +84,24 @@
 
   <script type="text/javascript">
     window.appConfig = {
-      access_token: '{{ access_token }}'
+      access_token: '{{ access_token|safe }}'
     }
   </script>
 
-  <script type="text/javascript">
-    var place = {{ data['center'] }}
+  <script>
+    var place = {{ data['center']|safe }}
   </script>
 
- <script type="text/javascript">
-    var title = {{ data['title'] }}
+ <script>
+    var title = {{ data['title']|safe }}
   </script>
 
- <script type="text/javascript">
-    var zoom = {{ data['zoom'] }}
+ <script>
+    var zoom = {{ data['zoom']|safe }}
   </script>
 
-  <script type="text/javascript">
-    var marks = {{ marks }}
+  <script>
+    var marks = {{ marks|safe }}
   </script>
 
   {% block scripts %}   
