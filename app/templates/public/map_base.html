@@ -1,4 +1,22 @@
 {% extends "public/base2.html" %}
 {% block title%} {{ data['title'] }} {% endblock %}
-{% block content %} <div id="map"></div> {% endblock %} 
+{% block content %} 
+<script>
+    var place = {{ data['center']|safe }}
+  </script>
+
+ <script>
+    var title = {{ data['title']|safe }}
+  </script>
+
+ <script>
+    var zoom = {{ data['zoom']|safe }}
+  </script>
+
+  <script>
+    var marks = {{ marks|safe }}
+  </script>
+  <div id="map"></div>
+   {% endblock %} 
+
 

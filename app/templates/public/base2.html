@@ -88,21 +88,7 @@
     }
   </script>
 
-  <script>
-    var place = {{ data['center']|safe }}
-  </script>
-
- <script>
-    var title = {{ data['title']|safe }}
-  </script>
-
- <script>
-    var zoom = {{ data['zoom']|safe }}
-  </script>
-
-  <script>
-    var marks = {{ marks|safe }}
-  </script>
+  
 
   {% block scripts %}   
   <script src="{{ url_for('static', filename='js/map_base.js') }}"></script> 
