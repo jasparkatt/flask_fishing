@@ -1,20 +1,20 @@
 .navbar {
-  background-color: rgba(65, 84, 104, 0.877);  
+  background-color: #09113db2;  
   font-size: 17px;
-  font-family: "Modern438Smc";  
+  font-family: 'Cabin Sketch'; 
 }
 
-.navbar-brand {
-  color: #f2f2f0;
-}
+/* .navbar-brand {
+  color: #dfdf11;
+} */
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #f2f1f0;
+  color: #FFFFFF;
 }
 
 .nav-link,
 .navbar-brand {
-  color: #fff;
+  color: #FFFFFF;
   cursor: default;
 }
 
@@ -23,11 +23,11 @@
 }
 
 .nav-link:hover {
-  background: #f6f7fad0;
-  color: #fffffff8;
+  background: #FFFFFF;
+  color: #FFFFFF;
   opacity: 0.95;
-  border-radius: 5px;
-  text-shadow: -0.6px 0 rgba(0, 0, 0, 0.993), 0 0.65px rgba(0, 0, 0, 0.938), 0.65px 0 rgba(0, 0, 0, 0.986), 0 -0.65px rgba(0, 0, 0, 0.986);
+  border-radius: 15px;
+  text-shadow: -0.75px 0 rgba(41, 41, 41, 0.849), 0 0.5px rgba(148, 148, 148, 0.781), 0.5px 0 rgba(136, 136, 136, 0.767), 0 -0.5px rgba(138, 138, 138, 0.747);
 }
 
 .navbar-collapse {
@@ -35,7 +35,7 @@
 }
 
 .navbar-toggler {
-  background: #fff !important;
+  background: #FFFFFF !important;
 }
 
 html,
@@ -58,22 +58,24 @@ body {
 table td {
   font-size: 13px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #FFFFFF;
 }
 
 /*Portfolio*/
 .portfolio {
   position: relative;
-  background: #F0F8FF;
+  background: #ffffff;
 }
 
 .portfolio img {
-  height: 14.50rem;
+  height: 15rem;
   width: 100%;
   margin: 1em;
-  border: 5px solid rgba(65, 84, 104, 0.877);
+  border: 5px solid rgba(12, 35, 102, 0.856);
   display: block;
   margin-left: auto;
   margin-right: auto;
+  filter: contrast(1.06) brightness(1.2);
 
 }
 
@@ -92,12 +94,12 @@ table td {
   overflow: hidden;
   opacity: 0;
   filter: alpha(opacity=0);
-  width: 56%;
+  width: 58%;
   height: 81%;
   left: 23%;
   top: 11%;
-  border-radius: 80%;
-  border: 2.2px solid rgba(248, 248, 255, 0.801);
+  border-radius: 81%;
+  border: 2.2px solid rgba(254, 254, 255, 0.849);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(50%, 50%, 0);
@@ -105,7 +107,7 @@ table td {
 }
 
 .hovereffect:hover .overlay {
-  background-color: rgba(21, 36, 37, 0.507);
+  background-color: rgba(12, 21, 34, 0.767);
 }
 
 .hovereffect img {
@@ -117,9 +119,9 @@ table td {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.4" /><feFuncG type="linear" slope="1.4" /><feFuncB type="linear" slope="1.4" /></feComponentTransfer></filter></svg>#filter');
   filter: brightness(2.6);
   -webkit-filter: brightness(2.6);
-  filter: grayscale(35%);
-  filter: blur(3.25px);
+  filter: sepia(45%) blur(2px) contrast(1.06) brightness(1.25) grayscale(25%);  
   transition: 0.32s;
+
 }
 
 .hovereffect h2 {
@@ -129,7 +131,7 @@ table td {
   font-size: 15px;
   padding: 15px;
   background-color: transparent;
-  color: #f8f8ff;
+  color: #FFFFFF;
   padding: 1em 0;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -143,7 +145,7 @@ table td {
 
 .hovereffect a,
 .hovereffect p {
-  color:#f8f8ff;
+  color:#FFFFFF;
   padding: 1em 0;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -169,7 +171,7 @@ table td {
 }
 
 .leaflet-popup-content-wrapper {
-  background: #fff8fc;
+  background: #FFFFFF;
   color: #000002;
   font: 15px Serifa BT;
   line-height: 22px;
@@ -206,13 +208,14 @@ p {
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(-150%, -400%, 0);
   transform: translate3d(-150%, -400%, 0);
-  font-family: "Modern438Smc", sans-serif;
+  font-family: "Rufina";
+  font-style: italic;
   display: inline;
 }
 
 .dropdown:hover > .dropdown-menu {
     display: block;
-    background: #e3e3ffab;
+    background: #eef3f5;
 }
 .dropdown > .dropdown-toggle:active {
     /*Without this, clicking will make it sticky*/

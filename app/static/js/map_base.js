@@ -46,7 +46,7 @@ $(document).ready(function() {
         zoom:myzoomFunc(),
         zoomControl:false,
         attributionControl:false,
-        layers: [lyrCreek,lyrLabels]
+        layers: [lyrLabels]
     });
 
     mymap.addLayer(lyrRelief);
@@ -70,10 +70,10 @@ $(document).ready(function() {
 
     for (var i = 0; i < marks.length; i++) {
         circle = new L.circle([marks[i][0],marks[i][1]], {
-        color: 'red',
-        fillColor: '#f03',
-        fillOpacity: 1,
-        radius: 750
+        color: '#330033e3',
+        fillColor: '#fcfcfc',
+        fillOpacity: 0.35,
+        radius: 600
         }).addTo(mymap);
     }
 })
