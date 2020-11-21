@@ -54,6 +54,11 @@ table td {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background: #FFFFFF;
 }
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 /*Portfolio*/
 .portfolio {
@@ -213,11 +218,8 @@ p {
 }
 .dropdown > .dropdown-toggle:active {
     /*Without this, clicking will make it sticky*/
-    pointer-events: none;
-    
+    pointer-events: none;    
 }
-
-
 
 footer {
   font-size: 13px;
