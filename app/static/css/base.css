@@ -1,7 +1,7 @@
 .navbar {
-  background-color: #09113db2;  
-  font-size: 17px;
-  font-family: 'Cabin Sketch'; 
+  background-color: rgba(12, 35, 102, 0.856);  
+  font-size: 16px;
+  font-family: 'Proza Libre'; 
 }
 
 /* .navbar-brand {
@@ -46,13 +46,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  overflow: auto;
-}
-
-.header {
-  background-image: url('../img/tomorrowbrown3.jpg');
-  background-size: cover;
-  background-position: center;
+  overflow: visible;
 }
 
 table td {

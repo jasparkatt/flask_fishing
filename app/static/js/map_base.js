@@ -14,10 +14,6 @@ function myzoomFunc() {
 function mymarkFunc() {
     return marks
 }
-
-
-
-
 //create a leaflet map object
 var mymap;
 var lyrSatellite; //open street maps
