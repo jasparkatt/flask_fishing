@@ -2,76 +2,7 @@
 {% block title %} Rambler Home {% endblock %}
 {% block css %}
 <style type="text/css">
-  .navbar {
-      background-color: rgba(12, 35, 102, 0.856);  
-      font-size: 16px;
-      font-family: 'Proza Libre'; 
-    }  
-    /* .navbar-brand {
-      color: #dfdf11;
-    } */  
-    .navbar-dark .navbar-nav .nav-link {
-      color: #FFFFFF;
-    }  
-    .nav-link,
-    .navbar-brand {
-      color: #FFFFFF;
-      cursor: default;
-    }  
-    .nav-link {
-      margin-right: 1em !important;
-    }  
-    .nav-link:hover {
-      background: #FFFFFF;
-      color: #FFFFFF;
-      opacity: 0.95;
-      border-radius: 15px;
-      text-shadow: -0.75px 0 rgba(41, 41, 41, 0.849), 0 0.5px rgba(148, 148, 148, 0.781), 0.5px 0 rgba(136, 136, 136, 0.767), 0 -0.5px rgba(138, 138, 138, 0.747);
-    }  
-    .navbar-collapse {
-      justify-content: flex-end;
-    }  
-    .navbar-toggler {
-      background: #FFFFFF !important;
-    }  
-    html,
-    body {
-      height: 100%;
-    }  
-    body {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }  
-    .header {
-      background-image: url('static/img/tomorrowbrown3.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-    p {
-      background-color: transparent;
-      color: rgba(40, 125, 153, 0.932);
-      padding: 1em 0;
-      opacity: 0;
-      filter: alpha(opacity=0);
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
-      -webkit-transform: translate3d(-150%, -400%, 0);
-      transform: translate3d(-150%, -400%, 0);
-      font-family: "Rufina";
-      font-style: italic;
-      display: inline;
-    }
-    
-    .dropdown:hover > .dropdown-menu {
-        display: block;
-        background: #eef3f5;
-    }
-    .dropdown > .dropdown-toggle:active {
-        /*Without this, clicking will make it sticky*/
-        pointer-events: none;
-        
-    }
+    .header {background-image: url('static/img/tomorrowbrown3.jpg'); background-size: cover; background-position: center;}    
   </style>
   {% endblock %}
 {% block content %}<section class="container-fluid">

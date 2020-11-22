@@ -35,13 +35,15 @@ $(document).ready(function() {
     lyrRelief = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxxen8yq5twc1cqaapjf1my9');
     lyrCreek = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxw63sdr03gj1cmy6y89ul89');
     lyrLabels = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxzb1lq71k3y1cob7ha24xw1');
-    lyrSatellite = L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v10');  
-    
+    lyrSatellite = L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v10');
+
     mymap = L.map('map', {
         center: myFunc(),
         zoom:myzoomFunc(),
         zoomControl:false,
         attributionControl:false,
+        tileSize: 512,
+        zoomOffset: -1,
         layers: [lyrLabels]
     });
 
@@ -70,7 +72,7 @@ $(document).ready(function() {
         fillColor: '#fcfcfc',
         fillOpacity: 0.35,
         radius: 600
-        }).addTo(mymap);
+        }).addTo(mymap).bindPopup('ju');
     }
 })
 

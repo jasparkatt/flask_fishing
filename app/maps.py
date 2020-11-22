@@ -2,8 +2,6 @@ from app import app
 from flask import render_template
 from app.settings import MAPBOX_ACCESS_TOKEN
 
-
-
 @app.route('/key')
 def key():
     access_token = MAPBOX_ACCESS_TOKEN
@@ -17,7 +15,6 @@ def mapPage():
     data = {'center': [44.41, -89.00], 'title': 'Home Waters', 'zoom': 7}
     return render_template('public/map_base.html', access_token=access_token,data=data)
 
-
 @app.route('/avalanche')
 def driftless():
     access_token = MAPBOX_ACCESS_TOKEN
@@ -30,7 +27,6 @@ def centralPage():
     access_token = MAPBOX_ACCESS_TOKEN
     data = {'center': [44.1475, -89.181389], 'title': 'Central Sands', 'zoom': 10}
     return render_template('public/map_base.html', access_token=access_token,data=data)
-
 
 @app.route('/upperwis')
 def upperwis():

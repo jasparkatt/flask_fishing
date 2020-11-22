@@ -1,25 +1,12 @@
 {% extends "public/base2.html" %}
 {% block title%} {{ data['title'] }} {% endblock %}
-{% block css %} 
+{% block css %}
 <style type="text/css">
-  .navbar {background-color: rgba(12, 35, 102, 0.856); font-size: 16px; font-family: 'Proza Libre';}
-
-    /* .navbar-brand {color: #dfdf11;} */
-
-    .navbar-dark .navbar-nav .nav-link {color: #FFFFFF;}
-    .nav-link, .navbar-brand {color: #FFFFFF; cursor: default;}
-    .nav-link {margin-right: 1em !important;}
-    .nav-link:hover {background: #FFFFFF; color: #FFFFFF; opacity: 0.95; border-radius: 15px; text-shadow: -0.75px 0 rgba(41, 41, 41, 0.849), 0 0.5px rgba(148, 148, 148, 0.781), 0.5px 0 rgba(136, 136, 136, 0.767), 0 -0.5px rgba(138, 138, 138, 0.747);}
-    .navbar-collapse {justify-content: flex-end;}
-    .navbar-toggler {background: #FFFFFF !important;}
-    html, body {height: 100%;}
-    body {display: flex; flex-direction: column; overflow: hidden;}
     #map {height: 100vh;}
-
-.leaflet-popup-content-wrapper {background: #FFFFFF; color: #000002; font: 15px Serifa BT; line-height: 22px; border: 1px double #00008b}
-.leaflet-popup-tip-container {width: 10px; height: 15px}
-.leaflet-popup-tip {border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid #2c3e50}
-.fish-icons {background-color: rgba(175, 190, 43, 0.705); background-image: url("japanese-carp.svg"); border-radius: 100%;}
+    .leaflet-popup-content-wrapper {background: #FFFFFF; color: #000002; font: 15px Serifa BT; line-height: 22px; border: 1px double #00008b}
+    .leaflet-popup-tip-container {width: 10px; height: 15px}
+    .leaflet-popup-tip {border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid #2c3e50}
+    .fish-icons {background-color: rgba(175, 190, 43, 0.705); background-image: url("japanese-carp.svg"); border-radius: 100%;}
 </style>
 {% endblock %}
 {% block content %} 
