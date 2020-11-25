@@ -4,12 +4,6 @@
 //to handle that logic by title name e.g. <title>Central sands<title/> find that example that shows
 //that title trick. 
 
-
-
-function mymarkFunc() {
-    return marks
-}
-
 //create a leaflet map object
 var mymap;
 var lyrSatellite; //open street maps
@@ -19,7 +13,7 @@ var lyrLabels; //style layer from mapbox
 var ctlLayers;
 var ctlBasemaps;
 var ctlOverlays;
-var marks = mymarkFunc();
+
 
 
 //get public access token
