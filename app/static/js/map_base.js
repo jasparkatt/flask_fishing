@@ -3,26 +3,18 @@
 //zoom to depends on page view...maybe use {{title}} jinja tag
 //to handle that logic by title name e.g. <title>Central sands<title/> find that example that shows
 //that title trick. 
-function myFunc() {
-    return place
-}
 
-function myzoomFunc() {
-    return zoom
-}
+
 
 function mymarkFunc() {
     return marks
 }
-function mylatlng() {
-    return spotx
-}
+
 //create a leaflet map object
 var mymap;
 var lyrSatellite; //open street maps
 var lyrRelief; //style layer from mapbox
 var lyrCreek; //style layer from mapbox
-var lyrSpotX; //geojson point data
 var lyrLabels; //style layer from mapbox
 var ctlLayers;
 var ctlBasemaps;
@@ -40,15 +32,18 @@ $(document).ready(function() {
     lyrCreek = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxw63sdr03gj1cmy6y89ul89');
     lyrLabels = L.mapbox.styleLayer('mapbox://styles/budsuttree/cjxzb1lq71k3y1cob7ha24xw1');
     lyrSatellite = L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v10');
+    lyrSpotx = L.geoJson(geo_json, {
+        pointToLayer: L.mapbox.marker.style,
+    });
 
     mymap = L.map('map', {
-        center: myFunc(),
-        zoom:myzoomFunc(),
+        center: place,
+        zoom:zoom,
         zoomControl:false,
         attributionControl:false,
         tileSize: 512,
         zoomOffset: -1,
-        layers: [lyrLabels]
+        layers: [lyrLabels,lyrSpotx]
     });
 
     mymap.addLayer(lyrRelief);
@@ -60,7 +55,8 @@ $(document).ready(function() {
 
     objOverlays = {
         "Trout Streams":lyrCreek,
-        "Labels":lyrLabels
+        "Labels":lyrLabels,
+        "Fishin' Holes":lyrSpotx
     };
 
     ctlLayers = L.control.layers(objBasemaps, objOverlays).addTo(mymap); //{position:'bottomright'}
@@ -70,13 +66,14 @@ $(document).ready(function() {
             .addTo(mymap);
     } */
 
-    for (var i = 0; i < marks.length; i++) {
+
+
+ /*    for (var i = 0; i < marks.length; i++) {
         circle = new L.circle([marks[i][0],marks[i][1]], {
         color: '#330033e3',
         fillColor: '#fcfcfc',
         fillOpacity: 0.35,
         radius: 600
         }).addTo(mymap).bindPopup('ju');
-    }
+    } */
 })
-

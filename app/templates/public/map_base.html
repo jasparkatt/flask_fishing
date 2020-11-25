@@ -3,6 +3,7 @@
 {% block css %}
 
 <style type="text/css">
+    
     #map {height: 100vh;}
     .leaflet-popup-content-wrapper {background: #FFFFFF; color: #000002; font: 15px Serifa BT; line-height: 22px; border: 1px double #00008b}
     .leaflet-popup-tip-container {width: 10px; height: 15px}
@@ -10,8 +11,11 @@
     .fish-icons {background-color: rgba(175, 190, 43, 0.705); background-image: url("japanese-carp.svg"); border-radius: 100%;}
 </style>
 {% endblock %}
-{% block content %} 
 
+{% block content %} 
+<script>
+  var geo_json = {{ geo_json|safe }}
+</script>
 <script>
       var place = {{ data['center']|safe }}
   </script>
@@ -23,8 +27,8 @@
   </script>
   <script>
     var marks = {{ marks|safe }}
-  </script>
-  <div id="map"></div>
+    </script>
+  <div id="map"></div> 
   {% endblock %} 
-
+  
 
