@@ -12,12 +12,12 @@
 new Chart(document.getElementById("myCanvas"), {
     type: 'bar',
     data: {
-      labels: mycntyFunc(),
+      labels: mytotalFunc().county,
       datasets: [
         {
           label: "County Name",
           backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: mytotalFunc()
+          data: mytotalFunc().total
         }
       ]
     },

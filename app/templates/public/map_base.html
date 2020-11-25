@@ -1,6 +1,7 @@
 {% extends "public/base2.html" %}
 {% block title%} {{ data['title'] }} {% endblock %}
 {% block css %}
+
 <style type="text/css">
     #map {height: 100vh;}
     .leaflet-popup-content-wrapper {background: #FFFFFF; color: #000002; font: 15px Serifa BT; line-height: 22px; border: 1px double #00008b}
@@ -10,8 +11,9 @@
 </style>
 {% endblock %}
 {% block content %} 
+
 <script>
-    var place = {{ data['center']|safe }}
+      var place = {{ data['center']|safe }}
   </script>
  <script>
     var title = {{ data['title']|safe }}

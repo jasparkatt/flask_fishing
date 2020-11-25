@@ -14,6 +14,9 @@ function myzoomFunc() {
 function mymarkFunc() {
     return marks
 }
+function mylatlng() {
+    return spotx
+}
 //create a leaflet map object
 var mymap;
 var lyrSatellite; //open street maps
@@ -25,6 +28,7 @@ var ctlLayers;
 var ctlBasemaps;
 var ctlOverlays;
 var marks = mymarkFunc();
+
 
 //get public access token
 L.mapbox.accessToken = appConfig.access_token;

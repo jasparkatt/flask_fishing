@@ -2,11 +2,6 @@ from app import app
 from flask import render_template
 from app.settings import MAPBOX_ACCESS_TOKEN
 
-@app.route('/key')
-def key():
-    access_token = MAPBOX_ACCESS_TOKEN
-    data = {'center': [43.556667, -90.887778],'title': 'Testing Page'}   
-    return render_template('public/key.html', access_token=access_token,data=data)
 
 # route for map with some data displayed
 @app.route('/map')
