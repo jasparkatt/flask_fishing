@@ -1,4 +1,11 @@
-from os import environ
+"""Load config from environment variables."""
+from os import environ, path
+from dotenv import load_dotenv
+
+
+# Load variables from .env
+basedir = path.abspath(path.dirname(__file__))
+load_dotenv(path.join(basedir, '.env'))
 
 SECRET_KEY = environ.get('SECRET_KEY')
 MAPBOX_ACCESS_TOKEN = environ.get('MAPBOX_ACCESS_TOKEN')
