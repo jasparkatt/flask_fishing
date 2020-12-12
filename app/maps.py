@@ -17,17 +17,24 @@ def mapPage():
 @app.route('/avalanche')
 def driftless():
     access_token = MAPBOX_ACCESS_TOKEN
-    geo_json = []
     data = {'center':[43.602222, -90.630278], 'title': 'The Driftless', 'zoom': 9}
-    return render_template('public/map_base.html', access_token=access_token,data=data,geo_json=geo_json)
+    cursor.execute("select row_to_json(fc) from (select 'FeatureCollection' as type, array_to_json(array_agg(f)) as features from (select 'Feature' as type, ST_AsGeoJSON(lg.geom)::json as geometry,(select row_to_json(t) from (select id , stream, county, species) t) as properties from all_spots as lg where county in ('Vernon','Crawford','Richland','Monroe','La Crosse', 'Sauk')) as f) as fc;")
+    varcons = cursor.fetchall()
+    geo_json=[]
+    for varcon in varcons:
+        geo_json.append(varcon[0])
+    return render_template('public/map_base.html', geo_json=geo_json,access_token=access_token,data=data)
 
 @app.route('/central')
 def centralPage():
     access_token = MAPBOX_ACCESS_TOKEN
-    geo_json = []
     data = {'center': [44.1475, -89.181389], 'title': 'Central Sands', 'zoom': 10}
-    return render_template('public/map_base.html', access_token=access_token,data=data,geo_json=geo_json)
-
+    cursor.execute("select row_to_json(fc) from (select 'FeatureCollection' as type, array_to_json(array_agg(f)) as features from (select 'Feature' as type, ST_AsGeoJSON(lg.geom)::json as geometry,(select row_to_json(t) from (select id , stream, county, species) t) as properties from all_spots as lg where county in ('Waupaca','Portage','Waushara','Adams','Marquette')) as f) as fc;")
+    varcons = cursor.fetchall()
+    geo_json=[]
+    for varcon in varcons:
+        geo_json.append(varcon[0])
+    return render_template('public/map_base.html', geo_json=geo_json,access_token=access_token,data=data)
 @app.route('/upperwis')
 def upperwis():
     access_token = MAPBOX_ACCESS_TOKEN
@@ -46,7 +53,7 @@ def newis():
 def key():
     access_token = MAPBOX_ACCESS_TOKEN
     data = {'center': [44.883333, -89.866667], 'title': 'All Spots', 'zoom': 7}
-    cursor.execute("select row_to_json(fc) from (select 'FeatureCollection' as type, array_to_json(array_agg(f)) as features from (select 'Feature' as type, ST_AsGeoJSON(lg.geom)::json as geometry,(select row_to_json(t) from (select id, stream, county, species) t) as properties from all_spots as lg) as f) as fc;")
+    cursor.execute("select row_to_json(fc) from (select 'FeatureCollection' as type, array_to_json(array_agg(f)) as features from (select 'Feature' as type, ST_AsGeoJSON(lg.geom)::json as geometry,(select row_to_json(t) from (select id , stream, county, species) t) as properties from all_spots as lg where county='Waupaca') as f) as fc;")
     varcons = cursor.fetchall()
     geo_json=[]
     for varcon in varcons:
