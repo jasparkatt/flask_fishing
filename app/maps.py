@@ -18,7 +18,7 @@ def mapPage():
 def driftless():
     access_token = MAPBOX_ACCESS_TOKEN
     data = {'center':[43.602222, -90.630278], 'title': 'The Driftless', 'zoom': 9}
-    cursor.execute("select row_to_json(fc) from (select 'FeatureCollection' as type, array_to_json(array_agg(f)) as features from (select 'Feature' as type, ST_AsGeoJSON(lg.geom)::json as geometry,(select row_to_json(t) from (select id , stream, county, species) t) as properties from all_spots as lg where county in ('Vernon','Crawford','Richland','Monroe','La Crosse', 'Sauk')) as f) as fc;")
+    cursor.execute("select row_to_json(fc) from (select 'FeatureCollection' as type, array_to_json(array_agg(f)) as features from (select 'Feature' as type, ST_AsGeoJSON(lg.geom)::json as geometry,(select row_to_json(t) from (select id , stream, county, species) t) as properties from all_spots as lg where county in ('Vernon','Crawford','Richland','Monroe','La Crosse', 'Sauk', 'Iowa', 'Jackson','Pierce','Dane','Rock')) as f) as fc;")
     varcons = cursor.fetchall()
     geo_json=[]
     for varcon in varcons:
@@ -29,7 +29,7 @@ def driftless():
 def centralPage():
     access_token = MAPBOX_ACCESS_TOKEN
     data = {'center': [44.1475, -89.181389], 'title': 'Central Sands', 'zoom': 10}
-    cursor.execute("select row_to_json(fc) from (select 'FeatureCollection' as type, array_to_json(array_agg(f)) as features from (select 'Feature' as type, ST_AsGeoJSON(lg.geom)::json as geometry,(select row_to_json(t) from (select id , stream, county, species) t) as properties from all_spots as lg where county in ('Waupaca','Portage','Waushara','Adams','Marquette')) as f) as fc;")
+    cursor.execute("select row_to_json(fc) from (select 'FeatureCollection' as type, array_to_json(array_agg(f)) as features from (select 'Feature' as type, ST_AsGeoJSON(lg.geom)::json as geometry,(select row_to_json(t) from (select id , stream, county, species) t) as properties from all_spots as lg where county in ('Waupaca','Portage','Waushara','Adams','Marquette','Marathon')) as f) as fc;")
     varcons = cursor.fetchall()
     geo_json=[]
     for varcon in varcons:
