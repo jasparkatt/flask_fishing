@@ -2,6 +2,7 @@
 /.vscode/
 /__pycache__/
 /app/__pycache__/
+/app/static/sql/
 /venv/
 /.env
 /app/static/img/brulepic.jpg
